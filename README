@@ -1,0 +1,24 @@
+# ---- Installation ----
+
+* To install this package, you need intel fortran compiler (ifort) and f2py.
+* To use other fortran compiler, please edit F90/src/Makefile but other fortran compiler is not tested.
+
+* Please type the following command in the current directory:
+    ./MAKEFILE all
+
+* In the installation, 
+  1) first fortran 90 sources under F90/src/*.f90 are compiled, creating fortran module and library under F90/mod and F90/lib. 
+  2) then interface to python under bispec/*.f90 is compiled by f2py, creating python module under wrap/
+
+# ---- Usage ----
+
+* Example of how to use this package: example/code_check.ipynb
+* Please convert it to ***.py using ipython if you need to run python code in the command line. 
+
+# ---- Other ----
+
+* Code is tested at the NERSC environment (https://www.nersc.gov/)
+
+* To compute the bispectrum, a precomputed matter power spectrum P(k) at z=0 is required. 
+* The data of P(k) is saved in data/Pklin.dat using the cosmology adopted to the fullsky lensing simulation of Takahashi et al.
+
